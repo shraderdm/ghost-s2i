@@ -16,7 +16,7 @@ RUN \
   cd /ghost && \
   npm install --production && \
   sed 's/127.0.0.1/0.0.0.0/' /ghost/config.example.js > /ghost/config.js && \
-  useradd ghost --home /ghost
+  useradd ghost --home /home/ghost
 
 # Add files.
 ADD start.bash /ghost-start
@@ -28,7 +28,7 @@ ENV NODE_ENV production
 VOLUME ["/data", "/ghost-override"]
 
 # Define working directory.
-WORKDIR /ghost
+WORKDIR /home/ghost
 
 # Define default command.
 CMD ["bash", "/ghost-start"]
