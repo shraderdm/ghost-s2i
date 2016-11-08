@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM rhscl/nodejs-4-rhel7:latest
+FROM registry.access.redhat.com/rhscl/nodejs-4-rhel7:latest
 
 # Install Ghost
 RUN \
